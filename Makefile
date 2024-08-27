@@ -154,17 +154,10 @@ build: check-git deps $(PROMU)
 GIT_BRANCH=$(shell $(GIT) rev-parse --abbrev-ref HEAD)
 .PHONY: crossbuild
 crossbuild: ## Builds all binaries for all platforms.
-ifeq ($(GIT_BRANCH), main)
 crossbuild: | $(PROMU)
 	@echo ">> crossbuilding all binaries"
 	# we only care about below two for the main branch
-	$(PROMU) crossbuild -v -p linux/amd64 -p linux/arm64 -p linux/ppc64le
-else
-crossbuild: | $(PROMU)
-	@echo ">> crossbuilding all binaries"
-	$(PROMU) crossbuild -v
-endif
-
+	$(PROMU) crossbuild -v -p linux/amd64 -p linux/arm64
 
 .PHONY: deps
 deps: ## Ensures fresh go.mod and go.sum.
@@ -213,7 +206,7 @@ docker-multi-stage:
 .PHONY: docker-build $(BUILD_DOCKER_ARCHS)
 docker-build: $(BUILD_DOCKER_ARCHS)
 $(BUILD_DOCKER_ARCHS): docker-build-%:
-	@docker build -t "thanos-linux-$*" \
+	@docker build -t "matthewhudsonedb/thanos-kind:$*" \
   --build-arg BASE_DOCKER_SHA="$($*)" \
   --build-arg ARCH="$*" \
   -f Dockerfile.multi-arch .

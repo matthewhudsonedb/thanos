@@ -94,6 +94,8 @@ require (
 	gopkg.in/yaml.v3 v3.0.1
 )
 
+replace github.com/thanos-io/objstore => github.com/matthewhudsonedb/objstore-aws-sdk-bump v1.0.0
+
 require (
 	github.com/efficientgo/core v1.0.0-rc.2
 	github.com/minio/sha256-simd v1.0.1
@@ -127,6 +129,8 @@ require (
 	cloud.google.com/go/auth v0.5.1 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.2 // indirect
 	github.com/HdrHistogram/hdrhistogram-go v1.1.2 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.11.4 // indirect
+	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.26.5 // indirect
 	github.com/bboreham/go-loser v0.0.0-20230920113527-fcc2c21820a3 // indirect
 	github.com/cilium/ebpf v0.11.0 // indirect
 	github.com/containerd/cgroups/v3 v3.0.3 // indirect
@@ -171,17 +175,17 @@ require (
 	github.com/armon/go-radix v1.0.0 // indirect
 	github.com/asaskevich/govalidator v0.0.0-20230301143203-a9d515a09cc2 // indirect
 	github.com/aws/aws-sdk-go v1.53.16 // indirect
-	github.com/aws/aws-sdk-go-v2 v1.16.0 // indirect
-	github.com/aws/aws-sdk-go-v2/config v1.15.1 // indirect
-	github.com/aws/aws-sdk-go-v2/credentials v1.11.0 // indirect
-	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.12.1 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.7 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.4.1 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/ini v1.3.8 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.9.1 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sso v1.11.1 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sts v1.16.1 // indirect
-	github.com/aws/smithy-go v1.11.1 // indirect
+	github.com/aws/aws-sdk-go-v2 v1.30.4 // indirect
+	github.com/aws/aws-sdk-go-v2/config v1.27.30 // indirect
+	github.com/aws/aws-sdk-go-v2/credentials v1.17.29 // indirect
+	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.16.12 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.3.16 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.16 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/ini v1.8.1 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.11.18 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sso v1.22.5 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sts v1.30.5 // indirect
+	github.com/aws/smithy-go v1.20.4 // indirect
 	github.com/baidubce/bce-sdk-go v0.9.111 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
